@@ -1,0 +1,13 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    recurly (2.5.1)
+
+PLATFORMS
+  x86-mingw32
+
+DEPENDENCIES
+  recurly (~> 2.5.1)
+
+BUNDLED WITH
+   1.11.2
