@@ -11,12 +11,13 @@ class CreateAccount
         :ca_file     => "C:\\Users\\Rebecca\\ruby\\cacert.pem"
     }
 
-    Recurly.subdomain      = 'mayes'
-    Recurly.api_key        = 'e480c6807f62466d85cdb770ead8aec3'
+    Recurly.subdomain      = 'apitest'
+    Recurly.api_key        = 'e9cb2dc0714841a3839768efcbf193a5'
     Recurly.default_currency = 'USD'
   end
 
   def create_account(account_code)
+    print("Create account test-    ")
     begin
       account = Recurly::Account.create(
           :account_code => account_code,
@@ -40,10 +41,12 @@ class CreateAccount
   end
 
   def verify_account(account_code)
+    print("Find/verify account test-    ")
     begin
       account = Recurly::Account.find(account_code)
     rescue Recurly::Resource::NotFound => e
       puts("FAIL: #{e.message}")
+      return
     end
     puts("PASS")
   end
