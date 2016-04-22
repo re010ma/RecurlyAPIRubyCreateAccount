@@ -1,8 +1,7 @@
 **What do these tests do?**
 ---------------------------
-These tests log into the Recurly App, navigate to the Account Summary page and
-confirm that the correct number of accounts are being displayed.
-
+These tests use Recurly's ruby client library to create a customer account,
+then verify that the account was created.
 
 **How do I run these tests?**
 ------------------------------
@@ -11,7 +10,3 @@ confirm that the correct number of accounts are being displayed.
 3. cd to the root directory of this project
 4. type `bundle install`
 5. Finally, type `bundle exec ruby create_account.rb`
-
-**Other Stuff**
----------------
-These tests use cucumber, capybara and rspec to do their work
