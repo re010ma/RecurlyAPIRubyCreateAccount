@@ -8,7 +8,7 @@ class CreateAccount
     #Workaround for Windows ruby OpenSSL issue
     Recurly::API.net_http = {
         :verify_mode => OpenSSL::SSL::VERIFY_PEER,
-        :ca_file     => "C:\\Users\\Rebecca\\ruby\\cacert.pem"
+        :ca_file     => "cacert.pem"
     }
 
     Recurly.subdomain      = 'apitest'
